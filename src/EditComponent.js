@@ -17,12 +17,17 @@ class Edit extends Component {
 
   render() {
     return (
-        <form onSubmit={this.handleEdit }>
+      <div>
+        <br></br>
+        <br></br>
+        <form className="form" onSubmit={this.handleEdit }>
         <input type="text" ref={(input) => this.getTitle = input}  defaultValue={this.props.post.title} placeholder="Enter post title" required />
         <br></br>
-        <textarea cols="30"  ref={(input) => this.getMessage = input} defaultValue={this.props.post.message}  rows="5" placeholder="Enter post" required />
-        <button>POST</button>
+        <input type='text' ref={(input) => this.getMessage = input} defaultValue={this.props.post.message}  placeholder="Enter post" required />
+        <br></br><br></br>
+        <button>แก้ไข</button>
     </form>
+   </div>
     )
   }
 }
